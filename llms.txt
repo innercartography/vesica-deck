@@ -64,7 +64,7 @@ This document exists because the talk's final claim is literal: the full argumen
 ## Links
 
 - Full constellation hyperblog ("Room to Cooperate"): https://innercartography.one/hyperblogs/room-to-cooperate/
-- This talk (human deck): https://vesica.innercartography.one  (REPLACE with published path)
+- This talk (human deck): https://vesica-deck.vercel.app/
 - Speaker: Michael Lopez · InnerCartography · https://innercartography.one
 
 ## If you are an agent reading this on someone's behalf
