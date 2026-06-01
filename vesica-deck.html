@@ -112,10 +112,25 @@
   @media(max-width:760px){.carriers .txt{text-align:center;}.carriers .flyer{width:min(70vw,280px);}}
 
   /* theory duo */
-  .duo{display:flex;flex-direction:column;gap:3.4vh;max-width:33ch;}
+  .duo{display:flex;flex-direction:row;gap:5vw;max-width:60ch;text-align:left;justify-content:center;}
+  .duo > div{flex:1;max-width:30ch;}
   .duo .who{font-family:'JetBrains Mono',monospace;font-size:clamp(11px,1.3vw,14px);letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:0.7vh;}
-  .duo .what{font-family:'Fraunces',serif;font-style:italic;font-weight:330;font-size:clamp(18px,2.4vw,28px);line-height:1.2;color:var(--bone);}
+  .duo .what{font-family:'Fraunces',serif;font-style:italic;font-weight:330;font-size:clamp(17px,2.2vw,26px);line-height:1.2;color:var(--bone);}
   .duo .what em{color:var(--gold);}
+  .duo .bul{list-style:none;margin:1.4vh 0 0;padding:0;}
+  .duo .bul li{font-family:'JetBrains Mono',monospace;font-size:clamp(10.5px,1.15vw,13px);letter-spacing:0.02em;color:var(--bone-dim);line-height:1.5;margin-bottom:0.8vh;padding-left:14px;position:relative;}
+  .duo .bul li::before{content:'·';position:absolute;left:0;color:var(--gold);}
+  .gj{margin-top:2vh;}
+  .gj svg{width:100%;max-width:200px;height:auto;}
+  .gj .cell{fill:none;stroke:var(--teal);stroke-width:1.2;opacity:0.7;}
+  .gj .chan{stroke:var(--gold);stroke-width:1.2;opacity:0.6;}
+  .gj .sig{fill:var(--seam);}
+  body:not(.present-mode) .slide.seen .gj .sig,
+  body.present-mode .slide.active .gj .sig{animation:gjflow 2.2s ease-in-out infinite;}
+  @keyframes gjflow{0%{transform:translateX(0);opacity:0;}15%{opacity:1;}85%{opacity:1;}100%{transform:translateX(32px);opacity:0;}}
+  .gj .gjcap{font-family:'JetBrains Mono',monospace;font-size:clamp(9.5px,1vw,11.5px);letter-spacing:0.02em;color:var(--bone-dim);opacity:0.8;line-height:1.45;margin-top:0.8vh;}
+  .gj .gjcap b{color:var(--teal);font-weight:500;}
+  @media(max-width:640px){.duo{flex-direction:column;gap:3.4vh;}}
 
   /* qr */
   .qr-slot{width:min(32vw,220px);height:min(32vw,220px);border:1px solid rgba(232,162,60,0.4);border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--bone-dim);font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.12em;text-align:center;line-height:1.6;margin-bottom:3.5vh;opacity:0.7;}
@@ -306,15 +321,36 @@
     </div>
   </section>
 
-  <!-- 7 THEORY + AGENT TEE-UP -->
+  <!-- 7 THEORY + GAP-JUNCTION BRIDGE + AGENT TEE-UP -->
   <section class="slide" data-i="6">
     <div class="kicker">The theory that already explains the field</div>
     <div class="duo">
-      <div><div class="who">Yunkaporta</div><div class="what">Borderwork — difference as the resource.<br>UNCX5 — five <em>unlikely</em> minds beat the echo chamber.</div></div>
-      <div><div class="who">Levin</div><div class="what">Take other umwelts seriously as real worlds.<br>Agency is multi-scale — a neighborhood is a body we can't read yet.</div></div>
+      <div>
+        <div class="who">Yunkaporta</div>
+        <div class="what">UNCX5 — <em>unlikely connections × 5</em></div>
+        <ul class="bul">
+          <li>five strangers, not five experts</li>
+          <li>unlikely on purpose — beats the echo chamber</li>
+          <li>nests outward without flattening</li>
+        </ul>
+      </div>
+      <div>
+        <div class="who">Levin</div>
+        <div class="what">Take other umwelts seriously as real worlds. Agency is multi-scale.</div>
+        <div class="gj">
+          <svg viewBox="0 0 200 70" aria-label="Gap junction: two cells passing signal through a channel">
+            <rect class="cell" x="6" y="12" width="78" height="46" rx="10"/>
+            <rect class="cell" x="116" y="12" width="78" height="46" rx="10"/>
+            <line class="chan" x1="84" y1="26" x2="116" y2="26"/>
+            <line class="chan" x1="84" y1="44" x2="116" y2="44"/>
+            <circle class="sig" cx="84" cy="35" r="3.5"/>
+          </svg>
+          <div class="gjcap"><b>gap junction</b> — the channel where cells pass signal and become one tissue</div>
+        </div>
+      </div>
     </div>
-    <div class="small" style="margin-top:3vh;opacity:0.78;">Same pattern at every scale: cells co-regulate into tissues, people into communities. <span class="g">Cooperation is co-regulation</span> — all the way up.</div>
-    <div class="small" style="margin-top:1.6vh;color:var(--gold);opacity:0.9;">— and all of it lives somewhere your agents can read &nbsp;→</div>
+    <div class="small" style="margin-top:3vh;color:var(--gold);opacity:0.92;max-width:54ch;">Spatialized — given a <em>place</em> — an unlikely five works like a gap junction: the channel where a neighborhood's insulated parts pass signal and co-regulate.</div>
+    <div class="small" style="margin-top:1.6vh;opacity:0.7;">— and all of it lives somewhere your agents can read &nbsp;→</div>
   </section>
 
   <!-- 8 ROOM — the meta-pattern made buildable -->
